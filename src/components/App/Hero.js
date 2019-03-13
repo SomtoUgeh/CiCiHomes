@@ -13,7 +13,7 @@ export class Hero extends Component {
             srcset="https://a0.muscache.com/4ea/air/v2/pictures/b3ab7ae3-87aa-4c93-9c9d-0443f423b692.jpg?t=c:w1131-h343,r:w1131-h343-sfit,e:fjpg-c75 1131w,https://a0.muscache.com/4ea/air/v2/pictures/b3ab7ae3-87aa-4c93-9c9d-0443f423b692.jpg?t=c:w2262-h686,r:w2262-h686-sfit,e:fjpg-c75 2262w,https://a0.muscache.com/4ea/air/v2/pictures/b3ab7ae3-87aa-4c93-9c9d-0443f423b692.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75 3393w"
             style={{
               width: '100%',
-              height: '100%',
+              height: '70vh',
               objectFit: 'cover',
               objectPosition: 'center center'
             }}
@@ -23,9 +23,7 @@ export class Hero extends Component {
               <img src="https://ernestojeh.com/favicon.ico" alt="logo" className="eIntel" />
               <h2 className="hero-title">Intel</h2>
             </span>
-            <p className="hero-tagline">
-              Get the quality accommodation in lagos from your comfort zone
-            </p>
+            <p className="hero-tagline">Get the quality accommodation from your comfort zone</p>
             <Link to="/" className="learn">
               Get Started ▶︎
             </Link>

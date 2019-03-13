@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Cards from './Cards';
-import { Card } from 'semantic-ui-react';
-import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
 import Card1 from './Card1';
 import image2 from '../../images/dark-min.jpg';
+import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
+import image3 from '../../images/mateusz-majewski-659603-unsplash-min.jpg';
+import image4 from '../../images/riccardo-oliva-231657-unsplash-min.jpg';
 
 export class Featured extends Component {
   render() {
     return (
       <div className="featured wrapper">
         <div className="featured-heading">
-          <h2 className="featured-title">Featured Intel Locations</h2>
+          <h2 className="featured-title">Featured Intel {this.props.destination}</h2>
           <p className="featured-tagline">
             Browse through our catalog of beautiful homes in the comfort of your home
           </p>
@@ -25,21 +25,21 @@ export class Featured extends Component {
           />
           <Card1
             image={image2}
-            title={'Ikeja'}
+            title={'Ikotun'}
             description={
               'Enjoy our wonderful homes from the Ikeja, from a wonderful walk by to the grand mall!'
             }
           />
           <Card1
-            image={image2}
-            title={'Ikeja'}
+            image={image3}
+            title={'Agege'}
             description={
               'Enjoy our wonderful homes from the Ikeja, from a wonderful walk by to the grand mall!'
             }
           />
           <Card1
-            image={image1}
-            title={'Ikeja'}
+            image={image4}
+            title={'Ikoyi'}
             description={
               'Enjoy our wonderful homes from the Ikeja, from a wonderful walk by to the grand mall!'
             }

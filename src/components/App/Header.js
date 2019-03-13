@@ -15,9 +15,6 @@ export class Header extends Component {
               </a>
             </li>
             <li>
-              <a href="#">List your home</a>
-            </li>
-            <li>
               <a href="#">Company</a>
             </li>
             <li>

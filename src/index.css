@@ -1,0 +1,19 @@
+.hero {
+  background-image: url('./images/dirk-sebregts-110695-unsplash-min.jpg');
+  object-fit: contain;
+  background-color: #031947;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: 88px;
+  height: 73vh;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.hero-content {
+  /* padding: 300px 0; */
+}

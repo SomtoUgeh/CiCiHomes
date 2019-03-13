@@ -4,6 +4,7 @@ import Header from './Header';
 import Maps from './Maps';
 import { Grid } from 'semantic-ui-react';
 import Hero from './Hero';
+import Featured from './Featured';
 
 export class Units extends Component {
   render() {
@@ -11,7 +12,9 @@ export class Units extends Component {
       <>
         <Header />
         <Hero />
-        <Grid divided="vertically" style={{ marginTop: '150px' }}>
+        <Featured />
+
+        {/* <Grid divided="vertically" style={{ marginTop: '150px' }}>
           <Grid.Row columns={2}>
             <Grid.Column>
               <CardsContainer />
@@ -20,7 +23,7 @@ export class Units extends Component {
               <Maps />
             </Grid.Column>
           </Grid.Row>
-        </Grid>
+        </Grid> */}
       </>
     );
   }

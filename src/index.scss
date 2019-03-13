@@ -3,9 +3,35 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h2,
+h3 {
+  font-family: 'Kaushan Script', cursive;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-weight: normal;
+}
+
 .wrapper {
   margin: 0 auto;
-  width: 85%;
+  width: 90%;
 }
 
 .hero-content {
@@ -69,6 +95,44 @@
       color: black;
       -webkit-transform: translateY(-4px);
       transform: translateY(-4px);
+    }
+  }
+}
+
+.featured {
+  .featured-heading {
+    margin: 50px 0;
+  }
+
+  .featured-title {
+    margin: 0;
+  }
+
+  .featured-tagline {
+    font-size: 18px;
+  }
+
+  .images-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    row-gap: 3rem;
+    column-gap: 1.5rem;
+
+    .image-container {
+      width: 100%;
+      border-radius: 3px;
+
+      img {
+        max-width: 100%;
+        min-height: 250px;
+      }
+
+      .house-descriptions {
+        p {
+          width: 90%;
+        }
+      }
     }
   }
 }

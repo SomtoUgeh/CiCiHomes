@@ -27,7 +27,7 @@ export class Hero extends Component {
               Get the quality accommodation in lagos from your comfort zone
             </p>
             <Link to="/" className="learn">
-              Learn More ▶︎
+              Get Started ▶︎
             </Link>
           </div>
         </div>

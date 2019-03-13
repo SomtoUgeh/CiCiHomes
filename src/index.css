@@ -1,12 +1,7 @@
-.hero {
-  background-image: url('./images/dirk-sebregts-110695-unsplash-min.jpg');
-  object-fit: contain;
-  background-color: #031947;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  margin-top: 88px;
-  height: 73vh;
+* {
+  font-family: 'Oswald', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .wrapper {
@@ -15,5 +10,67 @@
 }
 
 .hero-content {
-  /* padding: 300px 0; */
+  position: relative;
+  padding: 88px 0 0;
 }
+
+.hero-items {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  text-align: center;
+  padding: 150px 0 100px;
+}
+
+.hero-items .eIntel {
+  display: inline-block;
+  width: 34px;
+  margin-right: 5px;
+}
+
+.hero-items .hero-title {
+  font-size: 56px;
+  font-family: 'Kaushan Script', cursive;
+  display: inline-block;
+  margin: 0;
+}
+
+.hero-items .hero-tagline {
+  font-size: 18px;
+  max-width: 280px;
+  margin: auto;
+  padding: 15px 0;
+}
+
+.hero-items .learn {
+  border: 0;
+  background: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-radius: 4px;
+  color: black;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hero-items .learn:hover {
+  color: black;
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+/*# sourceMappingURL=index.css.map */

@@ -10,14 +10,14 @@ const Description = () => (
       <div>
         <img src={secure} alt="info" />
         <div className="describe">
-          <h3>Your vacation is safe with us</h3>
-          <p>Secure payments, 24/7 support and a Book with Confidence guarantee</p>
+          <h3>Your home is safe with us</h3>
+          <p>Secure location, 24/7 support and a book with Confidence guarantee</p>
         </div>
       </div>
       <div>
         <img src={map} alt="info" />
         <div className="describe">
-          <h3>Better vacations start here</h3>
+          <h3>Better accommodation starts here</h3>
           <p>From booking to staying, the whole process is easy and enjoyable</p>
         </div>
       </div>

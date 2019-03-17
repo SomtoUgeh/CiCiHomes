@@ -6,7 +6,6 @@ import FullImage from './FullImage';
 import Description from './Description';
 import Trending from './Trending';
 import Footer from './Footer';
-import Sub from './Sub';
 
 export class Units extends Component {
   render() {
@@ -15,11 +14,10 @@ export class Units extends Component {
         <Header />
         <Hero />
         <Description />
-        <Featured destination={'Locations'} />
-        <Featured destination={'Destinations'} />
+        <Featured destination="Locations" />
+        <Featured destination="Destinations" />
         <FullImage />
         <Trending />
-        <Sub />
         <Footer />
       </>
     );

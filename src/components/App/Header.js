@@ -15,12 +15,10 @@ export class Header extends Component {
               </a>
             </li>
             <li>
-              <a href="#">Company</a>
+              <a href="#">List your home</a>
             </li>
             <li>
-              <a href="#" id="fb">
-                Login
-              </a>
+              <a href="#">Login</a>
             </li>
             <li>
               <a href="#" id="twitter">

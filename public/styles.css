@@ -1,5 +1,6 @@
+@import 'type.css';
+
 * {
-  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
 
@@ -52,6 +53,7 @@ nav ul li a {
   font-size: 1.6em;
   padding-bottom: 1.3em;
   transition: 0.5s color;
+  font-family: 'Oswald', sans-serif;
 }
 
 nav ul li a:hover {

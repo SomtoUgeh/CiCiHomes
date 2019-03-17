@@ -12,7 +12,7 @@ export class Featured extends Component {
         <div className="featured-heading">
           <h2 className="featured-title">Featured Intel {this.props.destination}</h2>
           <p className="featured-tagline">
-            Browse through our catalog of beautiful homes in the comfort of your home
+            Browse through our catalog of beautiful homes around Lagos
           </p>
         </div>
         <div className="images-holder">

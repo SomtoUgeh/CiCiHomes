@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "google-maps-react": "^2.0.2",
     "history": "^4.7.2",
     "react": "^16.8.4",
     "react-background-slider": "^1.2.0",

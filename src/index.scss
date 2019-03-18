@@ -303,12 +303,10 @@ ul {
 
   .solid {
     display: block;
-    // margin-top: 68px;
     padding: 150px 0 50px 20px;
 
     h2 {
       font-size: 42px;
-      // font-family: 'Kaushan Script', cursive;
       color: white;
     }
   }
@@ -400,7 +398,7 @@ select option {
   border-left: 7px solid transparent;
   position: absolute;
   top: 18px;
-  right: 35px;
+  right: 15px;
 }
 
 .housing-card {
@@ -426,7 +424,6 @@ select option {
     img {
       max-width: 100%;
       min-height: 100%;
-      height: 100%;
     }
   }
 
@@ -473,8 +470,14 @@ select option {
 
 .map-container {
   overflow: hidden;
-  position: fixed;
   right: 0;
   top: 320px;
   width: 48%;
+  visibility: visible;
+
+  & > div > div > div {
+    position: fixed !important;
+    right: 0 !important;
+    left: 50% !important;
+  }
 }

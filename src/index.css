@@ -389,7 +389,7 @@ select option {
   border-left: 7px solid transparent;
   position: absolute;
   top: 18px;
-  right: 35px;
+  right: 15px;
 }
 
 .housing-card {
@@ -424,7 +424,6 @@ select option {
 .housing-card .housing-card__image img {
   max-width: 100%;
   min-height: 100%;
-  height: 100%;
 }
 
 .housing-card .housing-card__write .grouped-write {
@@ -467,9 +466,15 @@ select option {
 
 .map-container {
   overflow: hidden;
-  position: fixed;
   right: 0;
   top: 320px;
   width: 48%;
+  visibility: visible;
+}
+
+.map-container > div > div > div {
+  position: fixed !important;
+  right: 0 !important;
+  left: 50% !important;
 }
 /*# sourceMappingURL=index.css.map */

@@ -8,7 +8,9 @@ export class Controlled extends Component {
       <div className="wrapper">
         <div className="controlled">
           <CardsContainer />
-          <Maps />
+          <div className="map-container">
+            <Maps />
+          </div>
         </div>
       </div>
     );

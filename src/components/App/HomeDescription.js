@@ -9,8 +9,10 @@ const HomeDescription = () => {
   return (
     <>
       <Header />
-      <DetailsImage image={image} title="cool-homes" />
-      <Details />
+      <div className="details-container">
+        <Details />
+        <DetailsImage image={image} title="cool-homes" />
+      </div>
       <Footer />
     </>
   );

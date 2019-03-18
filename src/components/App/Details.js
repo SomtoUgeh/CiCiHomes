@@ -72,7 +72,9 @@ export class Details extends Component {
                 Ready for a tour ? <br /> Request an expose now
               </h3>
             </div>
-            <button className="email">Email</button>
+            <a href="mailto:info@eintel.com" className="email">
+              Email
+            </a>
             <Link to="/get-started" className="searching">
               Still Searching ?
             </Link>

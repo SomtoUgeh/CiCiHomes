@@ -60,7 +60,7 @@ nav ul li a:hover {
   border-bottom: 3px solid #333;
 }
 
-#current {
+.current {
   color: #ff4629;
   border-bottom: 3px solid #333;
 }

@@ -1,29 +1,44 @@
 import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 export class Header extends Component {
   render() {
     return (
       <header>
-        <a id="logo" href="#">
+        <Link id="logo" to="/">
           EI
-        </a>
+        </Link>
         <nav>
           <ul>
             <li>
-              <a href="#" id="current">
+              <NavLink
+                to="/get-started"
+                activeStyle={{
+                  borderBottom: '3px solid #333'
+                }}
+              >
                 Browse Homes
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#">List your home</a>
+              <NavLink
+                to="#"
+                activeStyle={{
+                  borderBottom: '3px solid #333'
+                }}
+              >
+                List your home
+              </NavLink>
             </li>
             <li>
-              <a href="#">Login</a>
-            </li>
-            <li>
-              <a href="#" id="twitter">
-                Get Started
-              </a>
+              <NavLink
+                to="#"
+                activeStyle={{
+                  borderBottom: '3px solid #333'
+                }}
+              >
+                Login
+              </NavLink>
             </li>
           </ul>
         </nav>

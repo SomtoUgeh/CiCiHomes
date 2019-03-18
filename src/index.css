@@ -11,6 +11,7 @@ h4,
 h5,
 h6 {
   font-family: 'CircularStd-Book', sans-serif;
+  margin-bottom: 5px;
 }
 
 h2,
@@ -52,7 +53,7 @@ ul {
           column-gap: 1.5rem;
 }
 
-.hero-items .learn, .presentation .presentation-content .presentation-text .learn {
+.hero-items .learn, .presentation .presentation-content .presentation-text .learn, .filters .filter .search-btn {
   border: 0;
   background: white;
   padding: 10px 20px;
@@ -78,7 +79,7 @@ ul {
   transition-timing-function: ease-out;
 }
 
-.hero-items .learn:hover, .presentation .presentation-content .presentation-text .learn:hover {
+.hero-items .learn:hover, .presentation .presentation-content .presentation-text .learn:hover, .filters .filter .search-btn:hover {
   color: black;
   -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
@@ -270,5 +271,205 @@ ul {
 
 .owner .creator .copy {
   margin-top: 20px;
+}
+
+.browse-header {
+  position: fixed;
+  width: 100%;
+}
+
+.product_container {
+  background: url("./images/dirk-sebregts-110695-unsplash-min.jpg") no-repeat no-repeat;
+  min-height: 200px;
+  background-size: cover;
+  background-position: top left;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.product_container .products {
+  background: rgba(0, 0, 0, 0.59);
+}
+
+.product_container .solid {
+  display: block;
+  padding: 150px 0 50px 20px;
+}
+
+.product_container .solid h2 {
+  font-size: 42px;
+  color: white;
+}
+
+.controls {
+  position: fixed;
+  width: 100%;
+  margin-top: 230px;
+  background-color: white;
+}
+
+.controlled {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.filters {
+  padding: 25px;
+  display: block;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.filters .filter {
+  display: inline-block;
+}
+
+.filters .filter .filter-search {
+  width: 550px;
+  height: 40px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 0;
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  font-family: 'CircularStd-Book', sans-serif;
+}
+
+.filters .filter .search-btn {
+  background: red;
+  color: white;
+  font-family: 'Akkurat';
+}
+
+.filters .filter .search-btn:hover {
+  color: white;
+}
+
+.select {
+  height: 40px;
+  width: 150px;
+  position: relative;
+  border-radius: 4px;
+  margin: 0 15px;
+  font-family: 'CircularStd-Book', sans-serif;
+  color: black;
+}
+
+select {
+  height: 40px;
+  padding: 5px 5px 5px 15px;
+  border: 0;
+  font-size: 14px;
+  width: 150px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #00468b;
+  font-family: 'CircularStd-Book', sans-serif;
+  color: black;
+  outline: 0;
+}
+
+select option {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  font-family: 'CircularStd-Book', sans-serif;
+  color: black;
+}
+
+.select::after {
+  content: '';
+  width: 0%;
+  height: 0%;
+  border-top: 8px solid rgba(35, 48, 61, 0.61);
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  position: absolute;
+  top: 18px;
+  right: 35px;
+}
+
+.housing-card {
+  border-radius: 6px !important;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 200ms -webkit-box-shadow ease-in-out;
+  transition: 200ms -webkit-box-shadow ease-in-out;
+  transition: 200ms box-shadow ease-in-out;
+  transition: 200ms box-shadow ease-in-out, 200ms -webkit-box-shadow ease-in-out;
+  overflow: visible;
+  margin: 30px 0;
+}
+
+.housing-card:hover {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.housing-card .housing-card__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 3fr;
+      grid-template-columns: 1.5fr 3fr;
+}
+
+.housing-card .housing-card__image {
+  width: 100%;
+}
+
+.housing-card .housing-card__image img {
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+
+.housing-card .housing-card__write .grouped-write {
+  padding: 20px;
+}
+
+.housing-card .housing-card__write h4 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.housing-card .housing-card__write .housing-card__description {
+  display: block;
+  font-size: 14px;
+}
+
+.housing-card .housing-card__write .housing-card__description > span {
+  display: inline-block;
+  margin-right: 10px;
+  color: gray;
+}
+
+.housing-card .housing-card__write .housing-card__address {
+  margin-top: 50px;
+  font-size: 16px;
+  color: black;
+  font-weight: normal;
+  font-family: 'Akkurat-Light';
+}
+
+.housing-card .housing-card__write .housing-card__amount {
+  padding: 10px 20px;
+  background-color: #f0f2f4;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Akkurat', sans-serif;
+}
+
+.map-container {
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 320px;
+  width: 48%;
 }
 /*# sourceMappingURL=index.css.map */

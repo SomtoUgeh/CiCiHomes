@@ -68,7 +68,9 @@ export class Details extends Component {
 
           <div className="request">
             <div>
-              <h3>Request the Expose now</h3>
+              <h3>
+                Ready for a tour ? <br /> Request an expose now
+              </h3>
             </div>
             <button className="email">Email</button>
             <Link to="/get-started" className="searching">

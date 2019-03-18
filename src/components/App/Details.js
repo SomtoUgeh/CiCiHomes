@@ -85,4 +85,6 @@ export class Details extends Component {
   }
 }
 
+//
+
 export default Details;

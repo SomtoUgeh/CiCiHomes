@@ -50,6 +50,10 @@ export class NewForm extends Component {
                 <label htmlFor="name">Phone number</label>
                 <input type="number" placeholder="080X XXXX XXX" />
               </div>
+              <div>
+                <label htmlFor="name">Estimated Amount</label>
+                <input type="number" placeholder="&#8358; 200,000 MoM" />
+              </div>
               <div className="upload">Upload Images</div>
               <button type="submit">Submit</button>
             </div>

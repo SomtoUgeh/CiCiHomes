@@ -22,7 +22,7 @@ const FullCard = () => {
               <p className="housing-card__address">23b Godmon street, off Okota road.</p>
             </div>
 
-            <p className="housing-card__amount">N200,000 MOM</p>
+            <p className="housing-card__amount">&#8358; 200,000 MOM</p>
           </div>
         </div>
       </Link>

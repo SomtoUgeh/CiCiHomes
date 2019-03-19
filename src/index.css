@@ -53,7 +53,7 @@ ul {
           column-gap: 1.5rem;
 }
 
-.hero-items .learn, .presentation .presentation-content .presentation-text .learn, .filters .filter .search-btn, .details .request .email {
+.hero-items .learn, .presentation .presentation-content .presentation-text .learn, .filters .filter .search-btn, .details .request .email, .new-home button {
   border: 0;
   background: white;
   padding: 10px 20px;
@@ -79,7 +79,7 @@ ul {
   transition-timing-function: ease-out;
 }
 
-.hero-items .learn:hover, .presentation .presentation-content .presentation-text .learn:hover, .filters .filter .search-btn:hover, .details .request .email:hover {
+.hero-items .learn:hover, .presentation .presentation-content .presentation-text .learn:hover, .filters .filter .search-btn:hover, .details .request .email:hover, .new-home button:hover {
   color: black;
   -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
@@ -573,5 +573,83 @@ select option {
   text-decoration: underline;
   display: block;
   color: black;
+}
+
+.new-home {
+  padding-top: 200px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.new-home .form-field {
+  border: 1px solid #d3d3d3;
+  padding: 60px;
+  margin: 50px auto;
+  border-radius: 6px;
+}
+
+.new-home .form-field > div {
+  margin-bottom: 20px;
+}
+
+.new-home label,
+.new-home input {
+  display: block;
+}
+
+.new-home label {
+  margin-bottom: 5px;
+  color: black;
+}
+
+.new-home input,
+.new-home textarea {
+  border: 0;
+  padding: 10px;
+  font-family: 'CircularStd-Book', sans-serif;
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  width: 100%;
+  resize: none;
+}
+
+.new-home textarea {
+  height: 100px;
+}
+
+.new-home input::-webkit-input-placeholder {
+  color: #b8b8b8;
+}
+
+.new-home input:-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+.new-home input::-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+.new-home input::placeholder {
+  color: #b8b8b8;
+}
+
+.new-home button {
+  background: red;
+  color: white;
+  font-family: 'Akkurat';
+  margin-top: 20px;
+}
+
+.new-home button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.new-home .upload {
+  background: none;
+  text-decoration: underline;
+  color: black;
+  border: 0;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

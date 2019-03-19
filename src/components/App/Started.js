@@ -8,7 +8,7 @@ const Started = () => {
   return (
     <>
       <Header />
-      <BrowseHeader />
+      <BrowseHeader text="Browse through our homes" />
       <Controls />
       <Controlled />
     </>

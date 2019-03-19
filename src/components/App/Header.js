@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import GoogleAuth from './auth/GoogleAuth';
 
 export class Header extends Component {
   render() {
@@ -22,7 +23,7 @@ export class Header extends Component {
             </li>
             <li>
               <NavLink
-                to="#"
+                to="/new"
                 activeStyle={{
                   borderBottom: '3px solid #333'
                 }}
@@ -31,14 +32,7 @@ export class Header extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="#"
-                activeStyle={{
-                  borderBottom: '3px solid #333'
-                }}
-              >
-                Login
-              </NavLink>
+              <GoogleAuth />
             </li>
           </ul>
         </nav>

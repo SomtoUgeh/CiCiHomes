@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import Units from './components/App/Units';
 import Started from './components/App/Started';
 import HomeDescription from './components/App/HomeDescription';
+import NewHome from './components/App/NewHome';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route exact path="/" component={Units} />
             <Route exact path="/get-started" component={Started} />
             <Route exact path="/details" component={HomeDescription} />
+            <Route exact path="/new" component={NewHome} />
           </Switch>
         </>
       </Router>

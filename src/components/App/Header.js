@@ -7,7 +7,7 @@ export class Header extends Component {
     return (
       <header>
         <Link id="logo" to="/">
-          CH
+          Cici
         </Link>
         <nav>
           <ul>

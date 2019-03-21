@@ -671,7 +671,7 @@ select option {
 .Toastify__toast-body {
   font-size: 13px !important;
   padding-left: 35px !important;
-  font-family: 'soleil', sans-serif !important;
+  font-family: 'CircularStd-Book', sans-serif;
   line-height: 1.75555 !important;
   font-weight: bold;
 }

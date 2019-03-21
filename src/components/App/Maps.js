@@ -8,8 +8,8 @@ export class Maps extends Component {
     showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: {},
-    lat: -1.2884,
-    lng: 36.8233
+    lat: 6.4926,
+    lng: 3.349
   };
 
   componentDidUpdate(prevProps, prevState) {

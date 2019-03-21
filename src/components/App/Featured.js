@@ -10,7 +10,7 @@ export class Featured extends Component {
     return (
       <div className="featured wrapper">
         <div className="featured-heading">
-          <h2 className="featured-title">Featured Intel {this.props.destination}</h2>
+          <h2 className="featured-title">Featured Cici {this.props.destination}</h2>
           <p className="featured-tagline">
             Browse through our catalog of beautiful homes around Lagos
           </p>

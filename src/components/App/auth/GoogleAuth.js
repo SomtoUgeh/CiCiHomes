@@ -1,37 +1,41 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export class GoogleAuth extends Component {
-  state = { isSignedIn: null };
+  state = { isSignedIn: null, user: '' };
 
   componentDidMount = () => {
     window.gapi.load('client:auth2', () => {
       window.gapi.client
         .init({
-          clientId: '185502951074-s10jhiatvvv2oqvr49dn280hporm16au.apps.googleusercontent.com',
+          clientId: '185502951074-v6d1a28evm0qqgkqlfiivfcl7q4ptb89.apps.googleusercontent.com',
           scope: 'email'
         })
         .then(() => {
           this.auth = window.gapi.auth2.getAuthInstance();
-          this.setState({ isSignedIn: this.auth.isSignedIn.get() });
-          localStorage.setItem('isSignedIn', this.state.isSignedIn);
         });
     });
   };
 
-  onSignIn = async () => {
-    await this.auth.signIn();
+  onSignIn = () => {
+    this.auth.signIn();
     const userEmail = this.auth.currentUser
       .get()
       .getBasicProfile()
       .getEmail();
 
-    const idToken = this.auth.currentUser.get().getAuthResponse().id_token;
-    this.setState({ isSignedIn: true });
+    this.setState({ user: userEmail });
+    this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+    localStorage.setItem('isSignedIn', this.state.isSignedIn);
+
+    toast('Welcome, great to have you here!', {
+      type: toast.TYPE.SUCCESS
+    });
   };
 
-  onSignOut = async () => {
-    await this.auth.signOut();
+  onSignOut = () => {
+    this.auth.signOut();
   };
 
   render() {

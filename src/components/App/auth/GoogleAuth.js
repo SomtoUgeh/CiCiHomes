@@ -18,8 +18,8 @@ export class GoogleAuth extends Component {
     });
   };
 
-  onSignIn = () => {
-    this.auth.signIn();
+  onSignIn = async () => {
+    await this.auth.signIn();
     const userEmail = this.auth.currentUser
       .get()
       .getBasicProfile()

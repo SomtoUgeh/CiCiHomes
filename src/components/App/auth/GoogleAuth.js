@@ -42,25 +42,13 @@ export class GoogleAuth extends Component {
     return (
       <>
         {this.state.isSignedIn ? (
-          <NavLink
-            onClick={this.onSignOut}
-            to="#"
-            activeStyle={{
-              borderBottom: '3px solid #333'
-            }}
-          >
+          <button onClick={this.onSignOut} className="auth">
             Logout
-          </NavLink>
+          </button>
         ) : (
-          <NavLink
-            onClick={this.onSignIn}
-            to="#"
-            activeStyle={{
-              borderBottom: '3px solid #333'
-            }}
-          >
+          <button onClick={this.onSignIn} className="auth">
             Login
-          </NavLink>
+          </button>
         )}
       </>
     );

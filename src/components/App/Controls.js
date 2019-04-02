@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 
 export class Controls extends Component {
-  state = {};
+  state = {
+    address: 'Location',
+    price: 'Price',
+    bedroom: 'Bedroom',
+    service: 'Services',
+    availability: 'Availability'
+  };
 
   handleSearch = e => {
     this.setState({ ...this.state, search: e.target.value }, () => {
@@ -52,8 +58,9 @@ export class Controls extends Component {
               onChange={this.handleSearch}
             />
           </div>
+
           <div className="price filter select">
-            <select className="dropdown" value={this.state.address} onChange={this.handleLocation}>
+            <select value={this.state.address} onChange={this.handleLocation}>
               <option value="Location">Location</option>
               <option value="Ikeja">Ikeja</option>
               <option value="Lekki">Lekki</option>

@@ -41,7 +41,8 @@ export const houseData = [
   {
     id: '2dferf34fwfemtgmo23',
     name: 'MoonShot Apartments',
-    address: '23 Ajah st, Ajah Lagos',
+    mainAddress: '23 Ajah st, Ajah Lagos',
+    address: 'Lekki',
     cost: '500,000',
     bathroom: 5,
     shortDescription: 'This is a nice home',
@@ -79,7 +80,8 @@ export const houseData = [
   {
     id: '2dferf34fwfemtgmo12',
     name: 'Sparse Apartments',
-    address: '23 mushin st, mushin Lagos',
+    mainAddress: '23 mushin st, mushin Lagos',
+    address: 'Festac',
     cost: '200,000',
     bathroom: 4,
     shortDescription: 'This is a beautiful home',
@@ -117,7 +119,8 @@ export const houseData = [
   {
     id: '2dferf34fwfemtgmo50',
     name: 'Gardens Apartments',
-    address: '23 VI st, Victoria Island Lagos',
+    mainAddress: '23 VI st, Victoria Island Lagos',
+    address: 'Ikeja',
     cost: '600,000',
     bathroom: 6,
     shortDescription: 'This is a mad home',

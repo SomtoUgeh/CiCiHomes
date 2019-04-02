@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export class NewForm extends Component {
   state = {};
@@ -14,23 +15,34 @@ export class NewForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const house = {
-      id: this.randomId(),
-      ...this.state
-    };
+    if (localStorage.user) {
+      const house = {
+        id: this.randomId(),
+        ...this.state
+      };
 
-    const exterior = house.exteriorQualities.split(',');
-    const interior = house.interiorQualities.split(',');
+      const exterior = house.exteriorQualities.split(',');
+      const interior = house.interiorQualities.split(',');
 
-    house.exteriorQualities = exterior;
-    house.interiorQualities = interior;
+      house.exteriorQualities = exterior;
+      house.interiorQualities = interior;
+      house.userId = JSON.parse(localStorage.getItem('user')).id;
 
-    const houses = JSON.parse(localStorage.getItem('houseData'));
-    const newHouses = [...houses, house];
+      const houses = JSON.parse(localStorage.getItem('houseData'));
+      const newHouses = [...houses, house];
 
-    // console.log(newHouses);
-    localStorage.setItem('houseData', JSON.stringify(newHouses));
-    this.props.history.push('/get-started');
+      console.log(newHouses);
+      // localStorage.setItem('houseData', JSON.stringify(newHouses));
+      // this.props.history.push('/get-started');
+
+      toast('Listing created successfully!', {
+        type: toast.TYPE.SUCCESS
+      });
+    } else {
+      toast('Please login to create new listing', {
+        type: toast.TYPE.ERROR
+      });
+    }
   };
 
   randomId = () => {

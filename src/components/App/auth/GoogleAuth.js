@@ -19,28 +19,44 @@ export class GoogleAuth extends Component {
 
   onSignIn = async () => {
     await this.auth.signIn();
-    const userEmail = this.auth.currentUser
-      .get()
-      .getBasicProfile()
-      .getEmail();
 
-    this.setState({ user: userEmail });
-    this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+    this.setState({
+      isSignedIn: this.auth.isSignedIn.get(),
+      userId: this.auth.currentUser.get().getId(),
+      userName: this.auth.currentUser
+        .get()
+        .getBasicProfile()
+        .getName(),
+      userEmail: this.auth.currentUser
+        .get()
+        .getBasicProfile()
+        .getEmail()
+    });
+
+    const user = {
+      id: this.state.userId,
+      name: this.state.userName,
+      email: this.state.userEmail
+    };
+
     localStorage.setItem('isSignedIn', this.state.isSignedIn);
+    localStorage.setItem('user', JSON.stringify(user));
 
-    toast('Welcome, great to have you here!', {
+    toast(`Welcome ${user.name}, great to have you here!`, {
       type: toast.TYPE.SUCCESS
     });
   };
 
   onSignOut = () => {
     this.auth.signOut();
+    localStorage.removeItem('user');
+    this.setState({ isSignedIn: false });
   };
 
   render() {
     return (
       <>
-        {this.state.isSignedIn ? (
+        {this.state.isSignedIn || localStorage.user ? (
           <button onClick={this.onSignOut} className="auth">
             Logout
           </button>

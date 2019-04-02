@@ -122,6 +122,7 @@ export class CardsContainer extends Component {
         {this.state.houses !== undefined && this.state.houses.length > 0 ? (
           this.state.houses.map((d, i) => (
             <FullCard
+              id={d.id}
               key={d.id}
               name={d.name}
               homeType={d.homeType}

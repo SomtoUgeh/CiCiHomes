@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
 
-const FullCard = ({ image, name, address, cost, totalRooms, homeType, bathroom }) => {
+const FullCard = ({ image, name, address, cost, totalRooms, homeType, bathroom, id }) => {
   return (
     <div to="/details" className="housing-card">
-      <Link to="/details">
+      <Link to={`/details/${id}`}>
         <div className="housing-card__container">
           <div className="housing-card__image">
             <img src={image1} alt="housing-card__houses" />

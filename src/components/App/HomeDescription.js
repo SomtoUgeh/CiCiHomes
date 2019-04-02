@@ -5,12 +5,12 @@ import Details from './Details';
 import Footer from './Footer';
 import image from '../../images/tim-easley-317615-unsplash-min.jpg';
 
-const HomeDescription = () => {
+const HomeDescription = props => {
   return (
     <>
       <Header />
       <div className="details-container">
-        <Details />
+        <Details id={props.match.params.id} />
         <DetailsImage image={image} title="cool-homes" />
       </div>
       <Footer />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
 
-const FullCard = () => {
+const FullCard = ({ image, name, address, cost, totalRooms, homeType, bathroom }) => {
   return (
     <div to="/details" className="housing-card">
       <Link to="/details">
@@ -12,17 +12,17 @@ const FullCard = () => {
           </div>
           <div className="housing-card__write">
             <div className="grouped-write">
-              <h4 className="housing-card__title">Skylight Apartments</h4>
+              <h4 className="housing-card__title">{name}</h4>
               <p className="housing-card__description">
-                <span>Apartment</span>
-                <span>2 Bedrooms</span>
-                <span>3 Bathrooms</span>
+                <span>{homeType}</span>
+                <span>{totalRooms} bedrooms</span>
+                <span>{bathroom} bathrooms</span>
                 <span>753 Sq.Ft.</span>
               </p>
-              <p className="housing-card__address">23b Godmon street, off Okota road.</p>
+              <p className="housing-card__address">{address}</p>
             </div>
 
-            <p className="housing-card__amount">&#8358; 200,000 MOM</p>
+            <p className="housing-card__amount">&#8358; {cost}</p>
           </div>
         </div>
       </Link>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export class GoogleAuth extends Component {

@@ -22,7 +22,6 @@ export class Hero extends Component {
           />
           <div className="hero-items">
             <span style={{ display: 'block' }}>
-              {/* <img src="https://ernestojeh.com/favicon.ico" alt="logo" className="eIntel" /> */}
               <h2 className="hero-title">Cici Homes</h2>
             </span>
             <p className="hero-tagline">Get the quality accommodation from your comfort zone</p>

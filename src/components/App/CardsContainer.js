@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FullCard from './FullCard';
+import { Link } from 'react-router-dom';
 
 export class CardsContainer extends Component {
   state = {};
@@ -133,7 +134,10 @@ export class CardsContainer extends Component {
             />
           ))
         ) : (
-          <p>There are no houses here, please try another filter</p>
+          <p>
+            There are no houses here, please try another filter. You can also create a new listing{' '}
+            <Link to="/new">here</Link>
+          </p>
         )}
       </div>
     );

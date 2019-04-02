@@ -1,6 +1,44 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 export class NewForm extends Component {
+  state = {};
+
+  handleChange = e => {
+    this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    const house = {
+      id: this.randomId(),
+      ...this.state
+    };
+
+    const exterior = house.exteriorQualities.split(',');
+    const interior = house.interiorQualities.split(',');
+
+    house.exteriorQualities = exterior;
+    house.interiorQualities = interior;
+
+    const houses = JSON.parse(localStorage.getItem('houseData'));
+    const newHouses = [...houses, house];
+
+    // console.log(newHouses);
+    localStorage.setItem('houseData', JSON.stringify(newHouses));
+    this.props.history.push('/get-started');
+  };
+
+  randomId = () => {
+    return Math.random()
+      .toString(36)
+      .substr(2);
+  };
+
   render() {
     return (
       <div>
@@ -8,51 +46,105 @@ export class NewForm extends Component {
           <div>
             <h1>List your home</h1>
           </div>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <div className="form-field">
               <div>
                 <label htmlFor="name">Name of Building/Apartment/Accommodation</label>
-                <input type="text" placeholder="Villa in Lagos..." />
+                <input
+                  type="text"
+                  name="name"
+                  onChange={this.handleChange}
+                  placeholder="Villa in Lagos..."
+                />
               </div>
               <div>
                 <label htmlFor="name">Short Description</label>
-                <input type="text" placeholder="Really cool home..." />
+                <input
+                  type="text"
+                  name="shortDescription"
+                  onChange={this.handleChange}
+                  placeholder="Really cool home..."
+                />
               </div>
               <div>
                 <label htmlFor="name">Home type</label>
-                <input type="text" placeholder="Entire home, Apartments, Shared apartments..." />
+                <input
+                  type="text"
+                  name="homeType"
+                  onChange={this.handleChange}
+                  placeholder="Entire home, Apartments, Shared apartments..."
+                />
               </div>
               <div>
                 <label htmlFor="name">Total rooms</label>
-                <input type="text" placeholder="4 Bedrooms, 3 Bathrooms..." />
+                <input
+                  type="text"
+                  name="totalRooms"
+                  onChange={this.handleChange}
+                  placeholder="4 Bedrooms..."
+                />
+              </div>
+              <div>
+                <label htmlFor="name">Total bathrooms</label>
+                <input
+                  type="text"
+                  name="bathroom"
+                  onChange={this.handleChange}
+                  placeholder="3 Bathrooms..."
+                />
               </div>
               <div>
                 <label htmlFor="name">Earliest move in </label>
-                <input type="text" placeholder="January 2020..." />
+                <input
+                  type="text"
+                  name="earliestMoveIn"
+                  onChange={this.handleChange}
+                  placeholder="January 2020..."
+                />
               </div>
               <div>
                 <label htmlFor="name">Available lease</label>
-                <input type="text" placeholder="2 years..." />
+                <input
+                  type="text"
+                  name="availableLease"
+                  onChange={this.handleChange}
+                  placeholder="2 years..."
+                />
               </div>
               <div>
                 <label htmlFor="name">Services</label>
-                <input type="text" placeholder="Yes/No" />
+                <input
+                  type="text"
+                  name="services"
+                  onChange={this.handleChange}
+                  placeholder="Yes/No"
+                />
               </div>
               <div>
                 <label htmlFor="name">Exterior qualities</label>
-                <textarea type="text" />
+                <textarea type="text" name="exteriorQualities" onChange={this.handleChange} />
               </div>
               <div>
                 <label htmlFor="name">Interior qualities</label>
-                <textarea type="text" />
+                <textarea type="text" name="interiorQualities" onChange={this.handleChange} />
               </div>
               <div>
                 <label htmlFor="name">Phone number</label>
-                <input type="number" placeholder="080X XXXX XXX" />
+                <input
+                  type="number"
+                  name="phone"
+                  onChange={this.handleChange}
+                  placeholder="080X XXXX XXX"
+                />
               </div>
               <div>
                 <label htmlFor="name">Estimated Amount</label>
-                <input type="number" placeholder="&#8358; 200,000 MoM" />
+                <input
+                  type="number"
+                  name="cost"
+                  onChange={this.handleChange}
+                  placeholder="&#8358; 200,000 MoM"
+                />
               </div>
               <div className="upload">Upload Images</div>
               <button type="submit">Submit</button>
@@ -64,4 +156,4 @@ export class NewForm extends Component {
   }
 }
 
-export default NewForm;
+export default withRouter(NewForm);

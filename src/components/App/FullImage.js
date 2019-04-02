@@ -18,7 +18,7 @@ const FullImage = () => (
         <div className="presentation-text">
           Each one-of-a-kind home is <span class="_1e8oe5u">thoughtfully decorated.</span>
           <div>
-            <Link to="/" className="learn">
+            <Link to="/new" className="learn">
               List your home ︎
             </Link>
           </div>

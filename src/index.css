@@ -308,6 +308,7 @@ ul {
   width: 100%;
   margin-top: 230px;
   background-color: white;
+  z-index: 4;
 }
 
 .controlled {

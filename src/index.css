@@ -421,6 +421,8 @@ select option {
 
 .housing-card .housing-card__image {
   width: 100%;
+  min-height: 260px;
+  max-height: 261px;
 }
 
 .housing-card .housing-card__image img {

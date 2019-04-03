@@ -45,12 +45,16 @@ export class GoogleAuth extends Component {
     toast(`Welcome ${user.name}, great to have you here!`, {
       type: toast.TYPE.SUCCESS
     });
+
+    window.location = '/';
   };
 
   onSignOut = () => {
     this.auth.signOut();
     localStorage.removeItem('user');
+    localStorage.removeItem('isSignedIn');
     this.setState({ isSignedIn: false });
+    window.location = '/';
   };
 
   render() {

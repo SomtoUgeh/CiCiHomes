@@ -1,8 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
+// import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
 import deleteHouse from '../../images/icon-box.svg';
 import setting from '../../images/icon-cog.svg';
+
+const images = [
+  'https://fibre.ams3.digitaloceanspaces.com/ovpmrkwj1d5zactclr5r.jpg',
+  'https://fibre.ams3.digitaloceanspaces.com/IMG_9935.JPG',
+  'https://fibre.ams3.digitaloceanspaces.com/Fav_Chev_Right.jpg',
+  'https://fibre.ams3.digitaloceanspaces.com/catxulp9o8kmsnykngb0.jpg'
+];
+
+const randomImages = images => {
+  return images[Math.floor(Math.random() * images.length)];
+};
 
 const FullCard = ({
   name,
@@ -21,7 +32,7 @@ const FullCard = ({
       <div to="/details" className="housing-card">
         <div className="housing-card__container">
           <div className="housing-card__image">
-            <img src={image1} alt="housing-card__houses" />
+            <img src={randomImages(images)} alt="housing-card__houses" />`
           </div>
           <div className="housing-card__write">
             <Link to={`/details/${id}`}>

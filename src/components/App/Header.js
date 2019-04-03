@@ -21,16 +21,18 @@ export class Header extends Component {
                 Browse Homes
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/new"
-                activeStyle={{
-                  borderBottom: '3px solid #333'
-                }}
-              >
-                List your home
-              </NavLink>
-            </li>
+            {localStorage.isSignedIn && (
+              <li>
+                <NavLink
+                  to="/new"
+                  activeStyle={{
+                    borderBottom: '3px solid #333'
+                  }}
+                >
+                  List your home
+                </NavLink>
+              </li>
+            )}
             <li>
               <GoogleAuth />
             </li>

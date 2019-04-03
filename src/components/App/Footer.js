@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <div class="footer_content">
-        <div class="nav_down wrapper">
+      <div className="footer_content">
+        <div className="nav_down wrapper">
           <div>
             <ul>
               <h3>Company</h3>
@@ -62,21 +62,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="social_container">
+          <div className="social_container">
             <ul>
               <h3>Connect with us</h3>
-              <li class="social_btn">
+              <li className="social_btn">
                 <a href="https://twitter.com/dragnet" target="_blank">
-                  <i class="fab fa-twitter" />
+                  <i className="fab fa-twitter" />
                 </a>
-                <a href="https://facebook.com/dragnet" target="_blank" class="facebook">
-                  <i class="fab fa-linkedin" />
+                <a href="https://facebook.com/dragnet" target="_blank" className="facebook">
+                  <i className="fab fa-linkedin" />
                 </a>
-                <a href="https://facebook.com/dragnet" target="_blank" class="facebook">
-                  <i class="fab fa-facebook-square" />
+                <a href="https://facebook.com/dragnet" target="_blank" className="facebook">
+                  <i className="fab fa-facebook-square" />
                 </a>
-                <a href="https://twitter.com/dragnet" target="_blank" class="facebook">
-                  <i class="fab fa-youtube" />
+                <a href="https://twitter.com/dragnet" target="_blank" className="facebook">
+                  <i className="fab fa-youtube" />
                 </a>
               </li>
             </ul>
@@ -84,9 +84,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="owner">
-        <div class="creator">
-          <h3 class="copy "> &copy; Copyright 2019 E Intel®</h3>
+      <div className="owner">
+        <div className="creator">
+          <h3 className="copy "> &copy; Copyright 2019 E Intel®</h3>
         </div>
       </div>
     </footer>

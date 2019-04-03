@@ -111,35 +111,41 @@ export class CardsContainer extends Component {
   };
 
   render() {
+    const { open } = this.state;
+
     return (
-      <div
-        style={{
-          height: '100%',
-          overflow: 'auto',
-          padding: '25px',
-          marginTop: '310px'
-        }}
-      >
-        {this.state.houses !== undefined && this.state.houses.length > 0 ? (
-          this.state.houses.map((d, i) => (
-            <FullCard
-              id={d.id}
-              key={d.id}
-              name={d.name}
-              homeType={d.homeType}
-              totalRooms={d.totalRooms}
-              bathroom={d.bathroom}
-              address={d.address}
-              cost={d.cost}
-            />
-          ))
-        ) : (
-          <p>
-            There are no houses here, please try another filter. You can also create a new listing{' '}
-            <Link to="/new">here</Link>
-          </p>
-        )}
-      </div>
+      <>
+        <div
+          style={{
+            height: '100%',
+            overflow: 'auto',
+            padding: '25px',
+            marginTop: '310px'
+          }}
+        >
+          {this.state.houses !== undefined && this.state.houses.length > 0 ? (
+            this.state.houses.map((d, i) => (
+              <FullCard
+                id={d.id}
+                key={d.id}
+                name={d.name}
+                homeType={d.homeType}
+                totalRooms={d.totalRooms}
+                bathroom={d.bathroom}
+                address={d.address}
+                cost={d.cost}
+                userId={d.userId}
+                mainAddress={d.mainAddress}
+              />
+            ))
+          ) : (
+            <p>
+              There are no houses here, please try another filter. You can also create a new listing{' '}
+              <Link to="/new">here</Link>
+            </p>
+          )}
+        </div>
+      </>
     );
   }
 }

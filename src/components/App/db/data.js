@@ -11,7 +11,7 @@ export const houseData = [
     totalRooms: 3,
     earliestMoveIn: '',
     availableLease: '2 Years',
-    services: true,
+    services: 'Yes',
     images: [
       'buildings-downtown-manhattan-nyc_925x-min.jpg',
       'dark-min.jpg',

@@ -6,9 +6,11 @@ import setting from '../../images/icon-cog.svg';
 
 const images = [
   'https://fibre.ams3.digitaloceanspaces.com/ovpmrkwj1d5zactclr5r.jpg',
-  'https://fibre.ams3.digitaloceanspaces.com/IMG_9935.JPG',
   'https://fibre.ams3.digitaloceanspaces.com/Fav_Chev_Right.jpg',
-  'https://fibre.ams3.digitaloceanspaces.com/catxulp9o8kmsnykngb0.jpg'
+  'https://fibre.ams3.digitaloceanspaces.com/catxulp9o8kmsnykngb0.jpg',
+  'https://fibre.ams3.digitaloceanspaces.com/ohipygsmnu4uwk55js7n.jpg',
+  'https://fibre.ams3.digitaloceanspaces.com/bkpllttagvxl3tgvzodb.jpg',
+  'https://fibre.ams3.digitaloceanspaces.com/u6hwx01jtktmradzfsqv.jpg'
 ];
 
 const randomImages = images => {

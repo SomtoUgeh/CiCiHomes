@@ -50,9 +50,11 @@ export class EditForm extends Component {
       house.interiorQualities = interior;
 
       const houses = JSON.parse(localStorage.getItem('houseData'));
-      const newHouses = [...houses, house];
 
-      localStorage.setItem('houseData', JSON.stringify(newHouses));
+      var foundIndex = houses.findIndex(x => x.id === house.id);
+      houses[foundIndex] = house;
+
+      localStorage.setItem('houseData', JSON.stringify(houses));
       this.props.history.push('/get-started');
 
       toast('Listing edited successfully!', {

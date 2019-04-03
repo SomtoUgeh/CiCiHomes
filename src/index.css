@@ -54,7 +54,7 @@ ul {
           column-gap: 1.5rem;
 }
 
-.hero-items .learn, .presentation .presentation-content .presentation-text .learn, .filters .filter .search-btn, .details .request .email, .new-home button {
+.hero-items .learn, .presentation .presentation-content .presentation-text .learn, .filters .filter .search-btn, .details .request .email, .new-home button, .modal-content .delete {
   border: 0;
   background: white;
   padding: 10px 20px;
@@ -80,7 +80,7 @@ ul {
   transition-timing-function: ease-out;
 }
 
-.hero-items .learn:hover, .presentation .presentation-content .presentation-text .learn:hover, .filters .filter .search-btn:hover, .details .request .email:hover, .new-home button:hover {
+.hero-items .learn:hover, .presentation .presentation-content .presentation-text .learn:hover, .filters .filter .search-btn:hover, .details .request .email:hover, .new-home button:hover, .modal-content .delete:hover {
   color: black;
   -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
@@ -796,5 +796,21 @@ select option {
   margin-right: 10px;
   width: 30px;
   z-index: 5;
+}
+
+.modal-content {
+  padding: 50px;
+}
+
+.modal-content .delete {
+  background: red;
+  color: white;
+  font-family: 'Akkurat';
+  margin-top: 20px;
+}
+
+.modal-content .delete:hover {
+  color: white;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

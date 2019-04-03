@@ -6,7 +6,7 @@ import Units from './components/App/Units';
 import Started from './components/App/Started';
 import HomeDescription from './components/App/HomeDescription';
 import NewHome from './components/App/NewHome';
-import EditHome from './components/App/EditForm';
+import EditHome from './components/App/EditHome';
 
 class App extends Component {
   render() {

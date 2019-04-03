@@ -1,9 +1,35 @@
 import React, { Component } from 'react';
 import FullCard from './FullCard';
 import { Link } from 'react-router-dom';
+import Modal from 'react-responsive-modal';
 
 export class CardsContainer extends Component {
-  state = {};
+  state = {
+    open: false
+  };
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
+
+  handleDelete = () => {
+    let id = this.state.id;
+
+    const houses = JSON.parse(localStorage.getItem('houseData'));
+    const newHouses = houses.filter(d => d.id !== id);
+
+    localStorage.setItem('houseData', JSON.stringify(newHouses));
+
+    this.setState({ open: false, houses: newHouses });
+  };
+
+  handleModalDetails = (selectedName, id) => {
+    this.setState({ open: true, selectedName, id });
+  };
 
   componentDidMount() {
     this.setState({
@@ -111,7 +137,7 @@ export class CardsContainer extends Component {
   };
 
   render() {
-    const { open } = this.state;
+    const { open, selectedName } = this.state;
 
     return (
       <>
@@ -136,6 +162,7 @@ export class CardsContainer extends Component {
                 cost={d.cost}
                 userId={d.userId}
                 mainAddress={d.mainAddress}
+                handleModalDetails={this.handleModalDetails}
               />
             ))
           ) : (
@@ -145,6 +172,14 @@ export class CardsContainer extends Component {
             </p>
           )}
         </div>
+        <Modal open={open} onClose={this.onCloseModal} center>
+          <div className="modal-content">
+            <h2> Are you sure you want to delete {selectedName} ?</h2>
+            <button className="delete" onClick={this.handleDelete}>
+              Delete
+            </button>
+          </div>
+        </Modal>
       </>
     );
   }

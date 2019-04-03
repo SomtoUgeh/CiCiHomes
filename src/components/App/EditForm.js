@@ -11,8 +11,8 @@ export class EditForm extends Component {
     const house = houses.find(d => d.id === id);
 
     this.setState({
-      house,
       id: house.id ? house.id : '',
+      name: house.name ? house.name : '',
       userId: house.userId ? house.userId : '',
       mainAddress: house.mainAddress ? house.mainAddress : '',
       address: house.address ? house.address : '',
@@ -25,8 +25,8 @@ export class EditForm extends Component {
       earliestMoveIn: house.earliestMoveIn ? house.earliestMoveIn : '',
       availableLease: house.availableLease ? house.availableLease : '',
       services: house.services ? house.services : '',
-      exteriorQualities: house.exteriorQualities.join('') ? house.exteriorQualities.join('') : '',
-      interiorQualities: house.interiorQualities.join('') ? house.interiorQualities.join('') : ''
+      exteriorQualities: house.exteriorQualities.join(',') ? house.exteriorQualities.join(',') : '',
+      interiorQualities: house.interiorQualities.join(',') ? house.interiorQualities.join(',') : ''
     });
   };
 
@@ -93,7 +93,7 @@ export class EditForm extends Component {
       <div>
         <div className="new-home">
           <div>
-            <h1>List your home</h1>
+            <h1>Edit your home</h1>
           </div>
           <form onSubmit={this.handleSubmit}>
             <div className="form-field">

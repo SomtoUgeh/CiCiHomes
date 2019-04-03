@@ -61,12 +61,12 @@ export class CardsContainer extends Component {
     }
 
     if (filters === 'bedroom') {
-      if (value === 'Location') {
+      if (value === 'Bedroom') {
         return this.props.houses;
       }
-      const filteredData = houses.filter(r => r.bedroom !== undefined && r.bedroom !== null);
+      const filteredData = houses.filter(r => r.totalRooms !== undefined && r.totalRooms !== null);
 
-      list = filteredData.filter(r => r.bedroom === value);
+      list = filteredData.filter(r => r.totalRooms === value);
       return list;
     }
 
@@ -74,9 +74,9 @@ export class CardsContainer extends Component {
       if (value === 'Services') {
         return this.props.houses;
       }
-      const filteredData = houses.filter(r => r.service !== undefined && r.service !== null);
+      const filteredData = houses.filter(r => r.services !== undefined && r.services !== null);
 
-      list = filteredData.filter(r => r.service === value);
+      list = filteredData.filter(r => r.services === value);
       return list;
     }
 
@@ -85,10 +85,10 @@ export class CardsContainer extends Component {
         return this.props.houses;
       }
       const filteredData = houses.filter(
-        r => r.availability !== undefined && r.availability !== null
+        r => r.availableLease !== undefined && r.availableLease !== null
       );
 
-      list = filteredData.filter(r => r.availability === value);
+      list = filteredData.filter(r => r.availableLease === value);
       return list;
     }
 

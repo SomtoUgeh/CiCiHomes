@@ -31,9 +31,8 @@ export class NewForm extends Component {
       const houses = JSON.parse(localStorage.getItem('houseData'));
       const newHouses = [...houses, house];
 
-      console.log(newHouses);
-      // localStorage.setItem('houseData', JSON.stringify(newHouses));
-      // this.props.history.push('/get-started');
+      localStorage.setItem('houseData', JSON.stringify(newHouses));
+      this.props.history.push('/get-started');
 
       toast('Listing created successfully!', {
         type: toast.TYPE.SUCCESS
@@ -85,6 +84,24 @@ export class NewForm extends Component {
                   name="homeType"
                   onChange={this.handleChange}
                   placeholder="Entire home, Apartments, Shared apartments..."
+                />
+              </div>
+              <div>
+                <label htmlFor="name">Address</label>
+                <input
+                  type="text"
+                  name="mainAddress"
+                  onChange={this.handleChange}
+                  placeholder="23b Godmon st, okota Isolo Lagos"
+                />
+              </div>
+              <div>
+                <label htmlFor="name">Key Location</label>
+                <input
+                  type="text"
+                  name="address"
+                  onChange={this.handleChange}
+                  placeholder="Ikeja, Yaba, VI, Ikoyi..."
                 />
               </div>
               <div>
@@ -152,7 +169,7 @@ export class NewForm extends Component {
               <div>
                 <label htmlFor="name">Estimated Amount</label>
                 <input
-                  type="number"
+                  type="text"
                   name="cost"
                   onChange={this.handleChange}
                   placeholder="&#8358; 200,000 MoM"

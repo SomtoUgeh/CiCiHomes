@@ -23,13 +23,13 @@ export class Controls extends Component {
 
   handlePrice = e => {
     this.setState({ price: e.target.value }, () => {
-      this.props.filterPrice(this.state.address);
+      this.props.filterPrice(this.state.price);
     });
   };
 
   handleBedroom = e => {
     this.setState({ bedroom: e.target.value }, () => {
-      this.props.filterBedroom(this.state.address);
+      this.props.filterBedroom(this.state.bedroom);
     });
   };
 
@@ -67,7 +67,6 @@ export class Controls extends Component {
               <option value="Ikoyi">Ikoyi</option>
               <option value="Alausa">Alausa</option>
               <option value="Yaba">Yaba</option>
-             
             </select>
           </div>
 

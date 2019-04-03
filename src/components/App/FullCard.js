@@ -4,9 +4,6 @@ import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
 import deleteHouse from '../../images/icon-box.svg';
 import setting from '../../images/icon-cog.svg';
 
-const user = JSON.parse(localStorage.getItem('user'));
-const userInfo = user.id;
-
 const FullCard = ({
   name,
   address,
@@ -43,7 +40,7 @@ const FullCard = ({
 
             <p className="housing-card__amount">
               &#8358; {cost}
-              {userId === userInfo && (
+              {localStorage.user && userId === JSON.parse(localStorage.getItem('user')).id && (
                 <div className="container-controls">
                   <Link to={`/edit/${id}`}>
                     <img

@@ -6,26 +6,27 @@ export class EditForm extends Component {
   state = {};
 
   componentDidMount = () => {
+    const id = this.props.id;
     const houses = JSON.parse(localStorage.getItem('houseData'));
-    const house = houses.find(d => d.id === this.props.id);
+    const house = houses.find(d => d.id === id);
 
     this.setState({
       house,
-      id: house.id,
-      userId: house.userId,
-      mainAddress: house.mainAddress,
-      address: house.address,
-      cost: house.cost,
-      phone: house.phone,
-      bathroom: house.bathroom,
-      shortDescription: house.shortDescription,
-      homeType: house.homeType,
-      totalRooms: house.totalRooms,
-      earliestMoveIn: house.earliestMoveIn,
-      availableLease: house.availableLease,
-      services: house.services,
-      exteriorQualities: house.exteriorQualities.join(''),
-      interiorQualities: house.interiorQualities.join('')
+      id: house.id ? house.id : '',
+      userId: house.userId ? house.userId : '',
+      mainAddress: house.mainAddress ? house.mainAddress : '',
+      address: house.address ? house.address : '',
+      cost: house.cost ? house.cost : '',
+      phone: house.phone ? house.phone : '',
+      bathroom: house.bathroom ? house.bathroom : '',
+      shortDescription: house.shortDescription ? house.bathroom : '',
+      homeType: house.homeType ? house.homeType : '',
+      totalRooms: house.totalRooms ? house.totalRooms : '',
+      earliestMoveIn: house.earliestMoveIn ? house.earliestMoveIn : '',
+      availableLease: house.availableLease ? house.availableLease : '',
+      services: house.services ? house.services : '',
+      exteriorQualities: house.exteriorQualities.join('') ? house.exteriorQualities.join('') : '',
+      interiorQualities: house.interiorQualities.join('') ? house.interiorQualities.join('') : ''
     });
   };
 

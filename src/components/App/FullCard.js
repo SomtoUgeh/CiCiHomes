@@ -4,6 +4,7 @@ import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
 import deleteHouse from '../../images/icon-box.svg';
 import setting from '../../images/icon-cog.svg';
 import Modal from 'react-responsive-modal';
+import history from '../../history';
 
 export class FullCard extends Component {
   state = {
@@ -25,6 +26,9 @@ export class FullCard extends Component {
     const newHouses = houses.filter(d => d.id !== id);
 
     localStorage.setItem('houseData', JSON.stringify(newHouses));
+
+    this.setState({ open: false });
+    history.push('/get-started');
   };
 
   render() {
@@ -32,7 +36,7 @@ export class FullCard extends Component {
     const userInfo = user.id;
 
     const {
-      image,
+      // image,
       name,
       address,
       cost,
@@ -84,8 +88,10 @@ export class FullCard extends Component {
                         alt="delete"
                         title="Delete house"
                         className="house-controls"
-                        onClick={() => {
-                          this.setState({ selectedId: id, selectedName: name });
+                        onClick={e => {
+                          this.setState({ selectedId: id, selectedName: name, open: true });
+                          e.preventDefault();
+                          e.stopPropagation();
                         }}
                       />
                     </div>

@@ -795,5 +795,6 @@ select option {
 .house-controls {
   margin-right: 10px;
   width: 30px;
+  z-index: 5;
 }
 /*# sourceMappingURL=index.css.map */

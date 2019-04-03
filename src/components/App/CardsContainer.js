@@ -66,7 +66,7 @@ export class CardsContainer extends Component {
 
     if (filters === 'address') {
       if (value === 'Location') {
-        return this.props.houses;
+        return JSON.parse(localStorage.getItem('houseData'));
       }
 
       const filteredData = houses.filter(r => r.address !== undefined && r.address !== null);
@@ -77,7 +77,7 @@ export class CardsContainer extends Component {
 
     if (filters === 'price') {
       if (value === 'Price') {
-        return this.props.houses;
+        return JSON.parse(localStorage.getItem('houseData'));
       }
 
       const filteredData = houses.filter(r => r.price !== undefined && r.price !== null);
@@ -88,7 +88,7 @@ export class CardsContainer extends Component {
 
     if (filters === 'bedroom') {
       if (value === 'Bedroom') {
-        return this.props.houses;
+        return JSON.parse(localStorage.getItem('houseData'));
       }
       const filteredData = houses.filter(r => r.totalRooms !== undefined && r.totalRooms !== null);
 
@@ -98,7 +98,7 @@ export class CardsContainer extends Component {
 
     if (filters === 'service') {
       if (value === 'Services') {
-        return this.props.houses;
+        return JSON.parse(localStorage.getItem('houseData'));
       }
       const filteredData = houses.filter(r => r.services !== undefined && r.services !== null);
 
@@ -108,7 +108,7 @@ export class CardsContainer extends Component {
 
     if (filters === 'availability') {
       if (value === 'Availability') {
-        return this.props.houses;
+        return JSON.parse(localStorage.getItem('houseData'));
       }
       const filteredData = houses.filter(
         r => r.availableLease !== undefined && r.availableLease !== null
@@ -120,7 +120,7 @@ export class CardsContainer extends Component {
 
     if (filters === 'search') {
       if (value === '') {
-        return this.props.houses;
+        return JSON.parse(localStorage.getItem('houseData'));
       }
 
       const filteredData = houses.filter(r => r.name !== undefined && r.name !== null);

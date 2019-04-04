@@ -141,6 +141,15 @@ export class NewForm extends Component {
                 />
               </div>
               <div>
+                <label htmlFor="name">Type</label>
+                <input
+                  type="text"
+                  name="type"
+                  onChange={this.handleChange}
+                  placeholder="Rent/Full Sale"
+                />
+              </div>
+              <div>
                 <label htmlFor="name">Services</label>
                 <input
                   type="text"
@@ -164,6 +173,15 @@ export class NewForm extends Component {
                   name="phone"
                   onChange={this.handleChange}
                   placeholder="080X XXXX XXX"
+                />
+              </div>
+              <div>
+                <label htmlFor="name">Your email</label>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={this.handleChange}
+                  placeholder="hello@cici-homes.com"
                 />
               </div>
               <div>

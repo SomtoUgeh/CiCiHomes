@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import image1 from '../../images/tim-easley-317615-unsplash-min.jpg';
 import deleteHouse from '../../images/icon-box.svg';
 import setting from '../../images/icon-cog.svg';
 

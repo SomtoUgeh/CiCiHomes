@@ -12,6 +12,8 @@ export class EditForm extends Component {
 
     this.setState({
       id: house.id ? house.id : '',
+      email: house.email ? house.email : '',
+      type: house.type ? house.type : '',
       name: house.name ? house.name : '',
       userId: house.userId ? house.userId : '',
       mainAddress: house.mainAddress ? house.mainAddress : '',
@@ -76,6 +78,8 @@ export class EditForm extends Component {
   render() {
     const {
       name,
+      email,
+      type,
       mainAddress,
       address,
       phone,
@@ -190,6 +194,16 @@ export class EditForm extends Component {
                 />
               </div>
               <div>
+                <label htmlFor="name">Type</label>
+                <input
+                  type="text"
+                  name="type"
+                  value={type ? type : ''}
+                  onChange={this.handleChange}
+                  placeholder="Rent/Full Sale"
+                />
+              </div>
+              <div>
                 <label htmlFor="name">Services</label>
                 <input
                   type="text"
@@ -225,6 +239,16 @@ export class EditForm extends Component {
                   value={phone ? phone : ''}
                   onChange={this.handleChange}
                   placeholder="080X XXXX XXX"
+                />
+              </div>
+              <div>
+                <label htmlFor="name">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={email ? email : ''}
+                  onChange={this.handleChange}
+                  placeholder="hello@cici-homes.com"
                 />
               </div>
               <div>

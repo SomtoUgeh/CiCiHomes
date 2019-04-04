@@ -6,11 +6,12 @@ import FullImage from './FullImage';
 import Description from './Description';
 import Trending from './Trending';
 import Footer from './Footer';
-import { houseData } from './db/data';
+import { houseData, users } from './db/data';
 
 export class Units extends Component {
   componentDidMount() {
     localStorage.setItem('houseData', JSON.stringify(houseData));
+    localStorage.setItem('users', JSON.stringify(users));
   }
 
   render() {

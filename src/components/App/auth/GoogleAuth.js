@@ -21,7 +21,6 @@ export class GoogleAuth extends Component {
     await this.auth.signIn();
 
     this.setState({
-      isSignedIn: this.auth.isSignedIn.get(),
       userId: this.auth.currentUser.get().getId(),
       userName: this.auth.currentUser
         .get()
@@ -39,14 +38,25 @@ export class GoogleAuth extends Component {
       email: this.state.userEmail
     };
 
-    localStorage.setItem('isSignedIn', this.state.isSignedIn);
-    localStorage.setItem('user', JSON.stringify(user));
+    const users = JSON.parse(localStorage.getItem('users'));
 
-    toast(`Welcome ${user.name}, great to have you here!`, {
-      type: toast.TYPE.SUCCESS
-    });
+    if (users.find(d => d.email === user.email)) {
+      this.setState({ isSignedIn: this.auth.isSignedIn.get() });
 
-    window.location = '/';
+      localStorage.setItem('isSignedIn', this.state.isSignedIn);
+      localStorage.setItem('user', JSON.stringify(user));
+
+      toast(`Welcome ${user.name}, great to have you here!`, {
+        type: toast.TYPE.SUCCESS
+      });
+
+      window.location = '/';
+    } else {
+      this.auth.signOut();
+      toast(`Please sign up to access all of our features`, {
+        type: toast.TYPE.ERROR
+      });
+    }
   };
 
   onSignOut = () => {

@@ -161,45 +161,21 @@ export const houseData = [
   }
 ];
 
-// Type Checking for houseData
-// typeof id === String;
-// typeof name === String;
-// typeof shortDescription === String;
-// typeof homeType === String;
-// typeof totalRooms === Number;
-// typeof earliestMoveIn === String;
-// typeof availableLease === String;
-// typeof services === Boolean;
-// typeof images === Array;
-// typeof exteriorQualities === Array;
-// typeof interiorQualities === Array;
-
-export const userData = [
+export const users = [
   {
     name: 'Lily Peter',
     id: '235r4353653435tt',
     address: '23 Ikoyi St, Ikoyi',
-    email: 'lily@gmail.com',
+    email: 'lily.d.peters@gmail.com',
+    phone: '08135110089',
+    registeredUser: true
+  },
+  {
+    name: 'Somto M.Ugeh',
+    id: '235r435365343530',
+    address: '23 Ikoyi St, Ikeja',
+    email: 'smugeh@gmail.com',
     phone: '08135110477',
-    newUser: false,
-    registeredUser: true,
-    isSignedIn: false,
-    houses: {
-      0: '23r3fgrdgrybhdrgryrhsyhsg',
-      1: 'egt356tgryh56e534getgegt',
-      2: '23435ftyg465g34tg346g',
-      3: '24r35g4fgeg4ergfte5tftg4eftge'
-    }
+    registeredUser: true
   }
 ];
-
-// Type Checking for userData
-// typeof name === String;
-// typeof id === String;
-// typeof address === String;
-// typeof email === String;
-// typeof phone === String;
-// typeof newUser === Boolean;
-// typeof registeredUser === Boolean;
-// typeof isSignedIn === Boolean;
-// typeof houses === Object;

@@ -7,6 +7,7 @@ import Started from './components/App/Started';
 import HomeDescription from './components/App/HomeDescription';
 import NewHome from './components/App/NewHome';
 import EditHome from './components/App/EditHome';
+import SignUp from './components/App/SignUp';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/details/:id" component={HomeDescription} />
             <Route exact path="/edit/:id" component={EditHome} />
             <Route exact path="/new" component={NewHome} />
+            <Route exact path="/sign-up" component={SignUp} />
           </Switch>
         </>
       </Router>

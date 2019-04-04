@@ -21,6 +21,18 @@ export class Header extends Component {
                 Browse Homes
               </NavLink>
             </li>
+            {localStorage.isSignedIn ? null : (
+              <li>
+                <NavLink
+                  to="/sign-up"
+                  activeStyle={{
+                    borderBottom: '3px solid #333'
+                  }}
+                >
+                  Sign Up
+                </NavLink>
+              </li>
+            )}
             {localStorage.isSignedIn && (
               <li>
                 <NavLink

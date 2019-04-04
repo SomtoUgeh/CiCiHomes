@@ -29,6 +29,7 @@ export class SignUp extends Component {
       const newUsers = [...users, user];
 
       localStorage.setItem('users', JSON.stringify(newUsers));
+
       this.props.history.push('/');
 
       toast('Sign up successfully, please sign in', {

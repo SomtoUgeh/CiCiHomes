@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { toast } from 'react-toastify';
+import history from '../../../history';
 
 export class GoogleAuth extends Component {
   state = { isSignedIn: null, user: '' };
@@ -50,7 +51,7 @@ export class GoogleAuth extends Component {
         type: toast.TYPE.SUCCESS
       });
 
-      window.location = '/';
+      history.push('/');
     } else {
       this.auth.signOut();
       toast(`Please sign up to access all of our features`, {
@@ -60,11 +61,12 @@ export class GoogleAuth extends Component {
   };
 
   onSignOut = () => {
+    this.setState({ isSignedIn: false });
     this.auth.signOut();
     localStorage.removeItem('user');
-    localStorage.removeItem('isSignedIn');
-    this.setState({ isSignedIn: false });
-    window.location = '/';
+    localStorage.setItem('isSignedIn', this.state.isSignedIn);
+
+    history.push('/');
   };
 
   render() {

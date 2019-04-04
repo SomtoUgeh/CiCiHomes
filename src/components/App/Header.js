@@ -3,7 +3,19 @@ import { NavLink, Link } from 'react-router-dom';
 import GoogleAuth from './auth/GoogleAuth';
 
 export class Header extends Component {
+  state = {
+    isSignedIn: ''
+  };
+
+  componentDidMount = () => {
+    const isSignedIn = JSON.parse(localStorage.getItem('isSignedIn'));
+
+    this.setState({ isSignedIn });
+  };
+
   render() {
+    const { isSignedIn } = this.state;
+
     return (
       <header>
         <Link id="logo" to="/">
@@ -21,7 +33,7 @@ export class Header extends Component {
                 Browse Homes
               </NavLink>
             </li>
-            {localStorage.isSignedIn ? null : (
+            {isSignedIn ? null : (
               <li>
                 <NavLink
                   to="/sign-up"
@@ -33,7 +45,7 @@ export class Header extends Component {
                 </NavLink>
               </li>
             )}
-            {localStorage.isSignedIn && (
+            {isSignedIn && (
               <li>
                 <NavLink
                   to="/new"

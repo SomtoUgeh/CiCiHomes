@@ -6,7 +6,7 @@ export class Controls extends Component {
     price: 'Price',
     bedroom: 'Bedroom',
     service: 'Services',
-    availability: 'Availability'
+    availability: 'Type'
   };
 
   handleSearch = e => {
@@ -71,6 +71,14 @@ export class Controls extends Component {
           </div>
 
           <div className="price filter select">
+            <select value={this.state.availability} onChange={this.handleAvailability}>
+              <option value="Type">Type</option>
+              <option value="Rent">Rent</option>
+              <option value="Full Sale">Full Sale</option>
+            </select>
+          </div>
+
+          <div className="price filter select">
             <select value={this.state.price} onChange={this.handlePrice}>
               <option value="Price">Price</option>
               <option value="700,000"> > 700,000</option>
@@ -88,15 +96,6 @@ export class Controls extends Component {
               <option value="3">3 </option>
               <option value="4">4 </option>
               <option value="5">5 </option>
-            </select>
-          </div>
-
-          <div className="price filter select">
-            <select value={this.state.availability} onChange={this.handleAvailability}>
-              <option value="Availability">Availability</option>
-              <option value="One week">One month</option>
-              <option value="Two weeks">Two months</option>
-              <option value="One month">Three months</option>
             </select>
           </div>
 

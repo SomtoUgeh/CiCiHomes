@@ -107,14 +107,12 @@ export class CardsContainer extends Component {
     }
 
     if (filters === 'availability') {
-      if (value === 'Availability') {
+      if (value === 'Type') {
         return JSON.parse(localStorage.getItem('houseData'));
       }
-      const filteredData = houses.filter(
-        r => r.availableLease !== undefined && r.availableLease !== null
-      );
+      const filteredData = houses.filter(r => r.type !== undefined && r.type !== null);
 
-      list = filteredData.filter(r => r.availableLease === value);
+      list = filteredData.filter(r => r.type === value);
       return list;
     }
 

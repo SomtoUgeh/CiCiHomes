@@ -16,7 +16,11 @@ export class Landing extends Component {
   render() {
     return (
       <>
-        <BackgroundSlider images={[image1, image2, image3, image4, image5, image6]} duration={8} transition={1} />
+        <BackgroundSlider
+          images={[image1, image2, image3, image4, image5, image6]}
+          duration={8}
+          transition={1}
+        />
         <LabelledButton content="Explore Our Options" onClick={this.handleClick} />
       </>
     );

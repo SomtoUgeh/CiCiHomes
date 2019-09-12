@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import farm2 from '../../images/farm2.jpg';
 
 const FullImage = () => (
   <div className="presentation wrapper">
@@ -10,16 +11,17 @@ const FullImage = () => (
           alt="presentation"
           role="presentation"
           sizes="100vw"
-          src="https://a0.muscache.com/4ea/air/v2/pictures/4a6409cc-7ee0-44ff-a78e-520fbb51054e.jpg?t=c:w1131-h343,r:w1131-h343-sfit,e:fjpg-c75"
-          srcSet="https://a0.muscache.com/4ea/air/v2/pictures/4a6409cc-7ee0-44ff-a78e-520fbb51054e.jpg?t=c:w1131-h343,r:w1131-h343-sfit,e:fjpg-c75 1131w,https://a0.muscache.com/4ea/air/v2/pictures/4a6409cc-7ee0-44ff-a78e-520fbb51054e.jpg?t=c:w2262-h686,r:w2262-h686-sfit,e:fjpg-c75 2262w,https://a0.muscache.com/4ea/air/v2/pictures/4a6409cc-7ee0-44ff-a78e-520fbb51054e.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75 3393w"
+          src={farm2}
+          style={{ maxHeight: '450px' }}
         />
       </div>
       <div>
-        <div className="presentation-text">
-          Each one-of-a-kind home is <span className="_1e8oe5u">thoughtfully decorated.</span>
+        <div className="presentation-text" style={{ color: 'white' }}>
+          Every one has the potential to tranform{' '}
+          <span className="_1e8oe5u">our agrictulture industry.</span>
           <div>
             <Link to="/new" className="learn">
-              List your home ︎
+              Contact Us
             </Link>
           </div>
         </div>

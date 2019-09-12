@@ -27,17 +27,15 @@ const Footer = () => {
             <ul>
               <h3>Services</h3>
               <li>
-                <a href=" ">List your home</a>
+                <a href=" ">Consultancy</a>
               </li>
               <li>
-                <a href=" ">Trending</a>
+                <a href=" ">Events and Trainings</a>
               </li>
               <li>
-                <a href=" ">Featured Locations</a>
+                <a href=" ">Insights</a>
               </li>
-              <li>
-                <a href=" ">Featured Destination</a>
-              </li>
+              <li></li>
             </ul>
           </div>
 
@@ -57,7 +55,7 @@ const Footer = () => {
                 <a href="tel:+2348101199767">+234 (0) 810 119 9767</a>
               </li>
               <li>
-                <a href="mailto:hello@dragnetsolutions.com">info@e-intelhouses.com</a>
+                <a href="mailto:hello@dragnetsolutions.com">info@cicis.com</a>
               </li>
             </ul>
           </div>
@@ -86,7 +84,7 @@ const Footer = () => {
 
       <div className="owner">
         <div className="creator">
-          <h3 className="copy "> &copy; Copyright 2019 E Intel®</h3>
+          <h3 className="copy "> &copy; Copyright 2019 CICIS®</h3>
         </div>
       </div>
     </footer>

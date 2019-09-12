@@ -1,64 +1,56 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import GoogleAuth from './auth/GoogleAuth';
 
 export class Header extends Component {
-  state = {
-    isSignedIn: ''
-  };
-
-  componentDidMount = () => {
-    const isSignedIn = JSON.parse(localStorage.getItem('isSignedIn'));
-
-    this.setState({ isSignedIn });
-  };
-
   render() {
-    const { isSignedIn } = this.state;
-
     return (
       <header>
         <Link id="logo" to="/">
-          Cici
+          CICIS
         </Link>
         <nav>
           <ul>
             <li>
               <NavLink
-                to="/get-started"
+                to="#e"
                 activeStyle={{
                   borderBottom: '3px solid #333'
                 }}
               >
-                Browse Homes
+                SERVICES
               </NavLink>
             </li>
-            {isSignedIn ? null : (
-              <li>
-                <NavLink
-                  to="/sign-up"
-                  activeStyle={{
-                    borderBottom: '3px solid #333'
-                  }}
-                >
-                  Sign Up
-                </NavLink>
-              </li>
-            )}
-            {isSignedIn && (
-              <li>
-                <NavLink
-                  to="/new"
-                  activeStyle={{
-                    borderBottom: '3px solid #333'
-                  }}
-                >
-                  List your home
-                </NavLink>
-              </li>
-            )}
+
             <li>
-              <GoogleAuth />
+              <NavLink
+                to="#e"
+                activeStyle={{
+                  borderBottom: '3px solid #333'
+                }}
+              >
+                CONSULTANCY
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="#e"
+                activeStyle={{
+                  borderBottom: '3px solid #333'
+                }}
+              >
+                EVENT & TRAINING
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="#e"
+                activeStyle={{
+                  borderBottom: '3px solid #333'
+                }}
+              >
+                INSIGHTS
+              </NavLink>
             </li>
           </ul>
         </nav>

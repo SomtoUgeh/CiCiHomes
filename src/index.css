@@ -202,8 +202,8 @@ ul {
 }
 
 .presentation {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 60px;
+  margin-bottom: 90px;
   padding-top: 50px;
 }
 
@@ -245,6 +245,10 @@ ul {
   font-family: 'Kaushan Script', cursive;
 }
 
+footer {
+  margin-top: -6px;
+}
+
 .footer_content {
   background: #0a5;
   padding: 100px 0;
@@ -257,6 +261,7 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   line-height: 2.5em;
+  width: 80%;
 }
 
 .nav_down p {
@@ -909,14 +914,40 @@ nav ul li a:hover {
   border-radius: 50%;
 }
 
-/* .cicis-services__avatar-text {
-  margin-top: 20px;
-} */
-
 .cicis-services__avatar-text h3 {
   font-size: 24px;
 }
 
 .cicis-services__avatar-text p {
   font-size: 16px;
+}
+.events {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #d1ffd2;
+}
+
+.events-image__container {
+  width: 100%;
+  height: 100%;
+}
+
+.events-image__container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.events-text__container {
+  padding: 150px 120px 50px;
+}
+
+.events-p {
+  padding-top: 20px;
+}
+
+.events-text__container p {
+  font-size: 18px;
+  line-height: 1.7;
 }

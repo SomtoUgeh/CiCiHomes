@@ -67,7 +67,7 @@ ul {
 }
 
 .description .describe {
-  margin: 120px 0;
+  margin: 150px 0 180px;
 }
 
 .description .describe h3 {
@@ -157,6 +157,7 @@ ul {
 }
 
 .featured {
+  background-color: rgba(54, 83, 111, 0.04);
   padding: 50px 0;
 }
 
@@ -201,6 +202,8 @@ ul {
 }
 
 .presentation {
+  margin-top: 150px;
+  margin-bottom: 150px;
   padding-top: 50px;
 }
 
@@ -248,9 +251,9 @@ ul {
 }
 
 .nav_down {
+  /* color: #0a5; */
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [4];
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   line-height: 2.5em;
@@ -264,6 +267,7 @@ ul {
 
 .nav_down a {
   color: white;
+  /* color: #0a5; */
 }
 
 .nav_down a:hover {
@@ -845,4 +849,74 @@ select option {
 
 nav ul li a:hover {
   color: #0a5;
+}
+
+.featured-wrapped {
+  width: 75%;
+}
+
+.featured-title {
+  font-size: 44px;
+}
+.cicis-services__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 70px;
+  margin-bottom: 80px;
+}
+
+.cicis-services__image {
+  width: 100%;
+  place-items: center;
+  display: grid;
+}
+
+.cicis-services__image img {
+  max-width: 100%;
+  margin-top: 50px;
+}
+
+.cicis-services__heading {
+  margin-bottom: 60px;
+}
+
+.cicis-services__heading h3 {
+  font-size: 32px;
+  text-align: right;
+}
+
+.cicis-services__text {
+  margin-top: 30px;
+}
+
+.cicis-services__textgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  /* margin-top: 20px; */
+}
+
+.services__textgrid__inner {
+  display: grid;
+  grid-template-columns: 1fr 7.5fr;
+  gap: 15px;
+}
+
+.cicis-services__avatar-image {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* .cicis-services__avatar-text {
+  margin-top: 20px;
+} */
+
+.cicis-services__avatar-text h3 {
+  font-size: 24px;
+}
+
+.cicis-services__avatar-text p {
+  font-size: 16px;
 }

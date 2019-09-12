@@ -21,9 +21,7 @@ export class Units extends Component {
         <Hero />
         <Description />
         <Featured destination="Locations" />
-        <Featured destination="Destinations" />
         <FullImage />
-        <Trending />
         <Footer />
       </>
     );

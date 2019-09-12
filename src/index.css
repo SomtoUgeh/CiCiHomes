@@ -940,7 +940,9 @@ nav ul li a:hover {
 }
 
 .events-text__container {
-  padding: 150px 120px 50px;
+  padding: 0 120px;
+  display: grid;
+  place-items: center center;
 }
 
 .events-p {
